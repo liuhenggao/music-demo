@@ -62,29 +62,32 @@ a{
     display: flex;
     height: 41px;
     font-size: 15px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
-.home header nav>a{
-    height: 100%;
-    flex: 1;
-}
 .home header nav .content{
     display: inline-block;
+    width: 33.333333333%;
     height: 100%;
     padding: 0 5px;
     line-height: 40px;
 }
-.home header nav .content.active{
+.home header nav .content .underline{
+    display: inline-block;
+    padding: 0 5px;
+}
+.home header nav .content .underline.active{
     color: #d33a31;
+    height: 41px;
     border-bottom: 2px solid #d33a31;
 }
-#suggestSheet{
+
+#sheetSong{
     padding-top: 20px;
 }
-#suggestSheet h2{
+#sheetSong h2{
     position: relative;
     font-size: 17px;
     padding-left: 9px;
@@ -92,7 +95,7 @@ a{
     height: 20px;
     line-height: 20px;
 }
-#suggestSheet h2::after{
+#sheetSong h2::after{
     content: '';
     display: block;
     position: absolute;
@@ -104,25 +107,29 @@ a{
     height: 16px;
     background-color: #d33a31;
 }
-#suggestSheet .songSheet{
+#sheetSong .songSheet{
     padding-bottom: 24px;
 }
-#suggestSheet .songSheet::after{
+#sheetSong .songSheet .ranks{
+    display: block;
+    padding-bottom: 16px;
+}
+#sheetSong .songSheet .ranks::after{
     content: '';
     display: block;
     clear: both;
 }
-#suggestSheet .songSheet li{
-    display: inline-block;
+#sheetSong .songSheet .sheet{
     float: left;
-    width: 33.33333333%;
-    padding: 0 0 16px 1px;
+    width: 33.3333333%;
+    padding: 0 1px;
 }
-#suggestSheet .songSheet .sheet .sheetImg{
+#sheetSong .songSheet .sheet .sheetImg{
     width: 100%;
 }
-#suggestSheet .songSheet .sheetTxt{
+#sheetSong .songSheet .sheetTxt{
     overflow: hidden;
+    padding: 6px 0 0 6px; 
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -130,7 +137,7 @@ a{
     font-size: 13px;
 }
 
-#newest h2{
+#sheetSong .newest h2{
     position: relative;
     font-size: 17px;
     padding-left: 9px;
@@ -138,7 +145,7 @@ a{
     height: 20px;
     line-height: 20px;
 }
-#newest h2::after{
+#sheetSong .newest h2::after{
     content: '';
     display: block;
     position: absolute;
@@ -151,23 +158,23 @@ a{
     background-color: #d33a31;
 }
 
-#newest .newsong li{
+#sheetSong .newest .newsong li{
     position: relative;
     height: 55px;
     padding-right: 42px;
     margin-left: 10px;
     border-bottom: 1px solid rgba(0,0,0,.1);
 }
-#newest .newsong li a{
+#sheetSong .newest .newsong li a{
     color: #333;
     width: 100%;
     height: 100%;
 }
-#newest .newsong li .musicInfo{
+#sheetSong .newest .newsong li .musicInfo{
     height: 100%;
     padding: 6px 0;
 }
-#newest .newsong li .musicName{
+#sheetSong .newest .newsong li .musicName{
     font-size: 17px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -175,15 +182,15 @@ a{
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
-#newest .newsong li .quality{
+#sheetSong .newest .newsong li .quality{
     width: 12px;
     height: 8px;
     display: inline-block;
     background: url('../image/sq.png') no-repeat;
-    background-size: 150px 100px;
+    background-size: 166px 97px;
     background-position: 0 0;
 }
-#newest .newsong li .begin{
+#sheetSong .newest .newsong li .begin{
     position: absolute;
     top: 50%;
     right: 10px;
@@ -194,25 +201,25 @@ a{
     background-size: 166px 97px;
     background-position: -24px 0;
 }
-#newest .newsong li .author{
+#sheetSong .newest .newsong li .author{
     display: inline-block;
     font-size: 12px;
     color: #888;
 }
-footer{
+#sheetSong footer{
     height: 30vh;
     width: 100%;
     padding-top: 16.9%;
     background: url('../image/footer-background.png') no-repeat;
     background-size: cover;
 }
-footer .logosvg{
+#sheetSong footer .logosvg{
     width: 230px;
     height: 44px;
     display: block;
     margin: 0 auto;
 }
-footer .maxArt{
+#sheetSong footer .maxArt{
     width: 80vw;
     height:40px;
     line-height: 40px;
@@ -222,10 +229,203 @@ footer .maxArt{
     border: 1px solid #d43c33;
     color: #d33a31;
 }
-footer .copyright{
+#sheetSong footer .copyright{
     font-size: 12px;
     color: #888;
     line-height: 16px;
     transform: scale(.75);
     text-align: center;
+}
+
+/*section 2*/
+
+#hotSong .tag{
+    position: relative;
+    padding-top: 38.9%;
+    overflow: hidden;
+    background: url('../image/tag.jpg') no-repeat;
+    background-size: cover;
+}
+#hotSong .tag .tagOuter{
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#hotSong .tag::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .2);
+}
+#hotSong .tag .tagImg{
+    width: 142px;
+    height: 67px;
+    background: url('../image/sq.png') no-repeat;
+    background-size: 166px 97px;
+    background-position: -24px -30px;
+}
+#hotSong .tag .upDate{
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, .8);
+    margin-top: 10px;
+}
+
+#hotSong .hotMusic .musicSheet li{
+    position: relative;
+    height: 56px;
+    padding-right: 42px;
+    margin-left: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+#hotSong .hotMusic .musicSheet li a{
+    display: flex;
+    color: #333;
+    width: 100%;
+    height: 100%;
+}
+#hotSong .hotMusic .musicSheet li .musicNum{
+    display: inline-block;
+    width: 28px;
+    height: 55px;
+    line-height: 55px;
+    color: #888;
+    align-items: center;
+}
+#hotSong .hotMusic .musicSheet li .musicInfo{
+    height: 100%;
+    width: 79vw;
+    padding: 6px 0;
+}
+#hotSong .hotMusic .musicSheet li .musicName{
+    font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+#hotSong .hotMusic .musicSheet li .quality{
+    width: 12px;
+    height: 8px;
+    display: inline-block;
+    background: url('../image/sq.png') no-repeat;
+    background-size: 150px 100px;
+    background-position: 0 0;
+}
+#hotSong .hotMusic .musicSheet li .begin{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    width: 22px;
+    height: 22px;
+    background: url('../image/sq.png') no-repeat;
+    background-size: 166px 97px;
+    background-position: -24px 0;
+}
+#hotSong .hotMusic .musicSheet li .author{
+    display: inline-block;
+    font-size: 12px;
+    color: #888;
+}
+#hotSong .moreSheet .lookMore{
+    display: inline-block;
+    height: 55px;
+    width: 100%;
+    line-height: 55px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+
+/* section 3 */
+#search{
+    display: flex;
+    flex-flow: column;
+}
+#searchSong .searchBox{
+    width: 100%;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+#searchSong .searchBox .raduisContent{ 
+    height: 30px;
+    width: 95vw;
+    color: #c9c9c9;
+    background-color: #ebecec;
+    border-radius: 30px;
+}
+#searchSong .searchBox input{
+    line-height: 18px;
+    height: 29px;
+    width: 75vw;
+    font-size: 14px;
+    color: #c9c9c9;
+    background-color: #ebecec;
+    border: none;
+    outline: none;
+}
+#searchSong .searchBox .radiusBox{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+#searchSong .searchBox .svgIcon{
+    display: inline-block;
+    width: 13px;
+    height:13px;
+    margin-top: 8.5px;
+    background-size: cover;
+    background-position: 0 0;
+}
+#searchSong .searchBox .look{
+    background: url('../image/下载.svg') no-repeat;
+}
+#searchSong .searchBox .delete{
+    background: url('../image/下载2.svg') no-repeat;
+}
+#searchSong .hotLook{
+    padding: 15px 10px 0 10px;
+    width: 100%;
+    
+}
+#searchSong .hotLook .hotTitle{
+    font-size: 12px;
+    color: #666;
+    line-height: 12px;
+}
+#searchSong .moreLook{
+    margin: 10px 0 7px 0;
+}
+#searchSong .moreLook li{
+    display: inline-block;
+     
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #d3d4da;
+    border-radius: 32px;
+    padding: 0 14px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    font-size: 14px;
+}
+#searchSong .moreLook li a{
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    margin-top: -2px;
+    color: #333;
 }

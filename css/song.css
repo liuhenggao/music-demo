@@ -1,0 +1,105 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-weight: normal;
+}
+*::after{
+    box-sizing: border-box;
+}
+*::before{
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+.cloudMusic{
+    height: 100vh;
+}
+.cloudMusic .setting .context{
+    position: absolute;
+    background: url('../image/songBackground.jpg') no-repeat;
+    background-size: cover;
+    height: 100%;
+    width:100%;
+    filter: blur(30px);
+    z-index: -1;
+}
+.cloudMusic .setting .context::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+.cloudMusic .setting .songInfo .cloudSvg{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+.cloudMusic .setting .songInfo .u-svg{
+    width: 92px;
+    height: 17px;
+}
+.cloudMusic .setting .songInfo .record{
+    width: 100%;
+    height: 366px;
+    padding-top: 70px;
+    position: relative;
+}
+.cloudMusic .setting .songInfo .record::before{
+    content: '';
+    display: block;
+    width: 96px;
+    height: 137px;
+    position: absolute;
+    background: url('../image/figure.png') no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 46vw;
+    z-index: 20;
+}
+.cloudMusic .setting .songInfo .record .lightRing{
+    width: 296px;
+    height: 296px;
+    background: url('../image/lightPong.png') no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    z-index: 10;
+}
+.cloudMusic .setting .songInfo .record .lightRing .blackLight{
+    width: 100%;
+    height: 100%;
+    background: url('../image/black.png') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.cloudMusic .setting .songInfo .record .lightRing .blackLight .lightImg{
+    width: 184px;
+    height: 184px;
+    position: absolute;
+    top: 56px;
+    left: 56px;
+    background: url('../image/songBackground.jpg') no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+.cloudMusic .setting .songInfo .record .lightRing .blackLight .start{
+    width: 56px;
+    height: 56px;
+    display: inline-block;
+    position: absolute;
+    background: url('../image/beigin.png') no-repeat;
+    background-size: cover;
+    top: 120px;
+    left: 120px;
+}
