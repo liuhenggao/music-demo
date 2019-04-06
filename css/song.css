@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #333;
+    color: rgb(71, 71, 71);
     font-weight: normal;
 }
 *::after{
@@ -27,13 +27,35 @@ a{
 }
 .cloudMusic .setting .context{
     position: absolute;
-    background: url('../image/songBackground.jpg') no-repeat;
+    background: url('../image/defaultBackground.png') no-repeat;
     background-size: cover;
     height: 100%;
     width:100%;
-    filter: blur(30px);
+    filter: blur(40px);
     z-index: -1;
 }
+
+/* 使图片和光圈转动 */
+.cloudMusic .setting .playing{
+    animation: spin 10s linear infinite;
+}
+@keyframes spin{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes spinTo{
+    0%{
+        transform: rotateZ(360deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
 .cloudMusic .setting .context::after{
     content: '';
     display: block;
@@ -74,7 +96,6 @@ a{
     background: url('../image/lightPong.png') no-repeat;
     background-size: cover;
     margin: 0 auto;
-    z-index: 10;
 }
 .cloudMusic .setting .songInfo .record .lightRing .blackLight{
     width: 100%;
@@ -84,13 +105,11 @@ a{
     position: relative;
 }
 .cloudMusic .setting .songInfo .record .lightRing .blackLight .lightImg{
-    width: 184px;
-    height: 184px;
+    width: 185px;
+    height: 185px;
     position: absolute;
     top: 56px;
     left: 56px;
-    background: url('../image/songBackground.jpg') no-repeat;
-    background-size: cover;
     border-radius: 50%;
 }
 .cloudMusic .setting .songInfo .record .lightRing .blackLight .start{
@@ -102,4 +121,96 @@ a{
     background-size: cover;
     top: 120px;
     left: 120px;
+    animation: spinTo 10s linear infinite;
+}
+.cloudMusic .setting .songInfo .lyricInfo{
+    width: 100%;
+    height: 89px;
+    padding: 0 35px;
+    text-align: center;
+    margin-top: 25px;
+}
+.cloudMusic .setting .songInfo .lyricInfo .light{
+    color: #fefefe;
+}
+.cloudMusic .setting .songInfo .lyricInfo .black{
+    color: rgb(161, 159, 161);
+    font-size: 14px;
+    padding-top: 6px;
+    overflow: hidden;
+    text-overflow: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.cloudMusic .setting .songInfo .lyricInfo .singer{
+    color: rgb(161, 159, 161);
+}
+.cloudMusic .setting .songInfo .lyricInfo .songName{
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.cloudMusic .setting .songInfo .lyricInfo .songName .singer{
+    font-size: 16px;
+}
+.cloudMusic .setting .songInfo .lyricInfo .lyric{
+    height: 56px;
+    color: #757575;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.cloudMusic .setting .songInfo .moreLyric{
+    width: 100%;
+    height: 56px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    bottom: 7%;
+}
+.cloudMusic .setting .songInfo .moreLyric p{
+    color:  hsla(0,0%,100%,.6);
+    padding-bottom: 10px;
+}
+.cloudMusic .setting .songInfo .moreLyric .upInfo{
+    display: inline-block;
+    height: 12px;
+    width: 17px;
+    background: url('../image/upup.png') no-repeat;
+    background-size: cover;
+}
+.cloudMusic .setting .artLink{
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    bottom: 10px;
+}
+.cloudMusic .setting .artLink .artBtn{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cloudMusic .setting .artLink .button{
+    display: inline-block;
+    height: 40px;
+    width: 47vw;
+    text-align: center;
+    padding: 0 6px;
+    border: 1px solid #d33a31;
+    line-height: 38px;
+    border-radius: 38px;
+}
+.cloudMusic .setting .artLink .openLink{
+    color: #d33a31;
+    font-size: 18px;
+}
+.cloudMusic .setting .artLink .loadLink{
+    background-color: #d33a31;
+    color: #fefefe;
+    font-size: 18px;
 }

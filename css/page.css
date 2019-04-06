@@ -19,10 +19,23 @@ a{
     color: inherit;
     text-decoration: none;
 }
-
+::-webkit-scrollbar{
+    /*scroll滚动条设置*/
+    width: 0px; height: 0px;background-color: #fff;  
+}
 /* layout */
-.home header{
+.home{
+    display: flex;
+    display: -webkit-inline-flex;
+    height: 100%;
     width: 100%;
+    flex-direction: column;
+}
+.home .main{
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    height: auto;
 }
 .home header .top1{
     display: flex;
@@ -207,9 +220,9 @@ a{
     color: #888;
 }
 #sheetSong footer{
-    height: 30vh;
     width: 100%;
-    padding-top: 16.9%;
+    height: 30vh;
+    padding-top: 66px;
     background: url('../image/footer-background.png') no-repeat;
     background-size: cover;
 }
@@ -235,6 +248,7 @@ a{
     line-height: 16px;
     transform: scale(.75);
     text-align: center;
+    margin-bottom: 15px;
 }
 
 /*section 2*/
@@ -298,9 +312,10 @@ a{
     width: 28px;
     height: 55px;
     line-height: 55px;
-    color: #888;
+    color: inherit;
     align-items: center;
 }
+
 #hotSong .hotMusic .musicSheet li .musicInfo{
     height: 100%;
     width: 79vw;
@@ -367,12 +382,14 @@ a{
     background-color: #ebecec;
     border-radius: 30px;
 }
+
+input::-webkit-input-placeholder{color:#ebecec;}
 #searchSong .searchBox input{
     line-height: 18px;
     height: 29px;
-    width: 75vw;
+    width: 70vw;
     font-size: 14px;
-    color: #c9c9c9;
+    color: #333333;
     background-color: #ebecec;
     border: none;
     outline: none;
@@ -396,11 +413,11 @@ a{
 }
 #searchSong .searchBox .delete{
     background: url('../image/下载2.svg') no-repeat;
+    
 }
 #searchSong .hotLook{
     padding: 15px 10px 0 10px;
     width: 100%;
-    
 }
 #searchSong .hotLook .hotTitle{
     font-size: 12px;
@@ -428,4 +445,30 @@ a{
     line-height: 32px;
     margin-top: -2px;
     color: #333;
+}
+#searchSong .results .resultSong{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+#searchSong .results .resultSong a{
+    display: inline-block;
+    width: 90%;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #ebecec;
+    overflow: hidden;
+    padding-left: 5px;
+    font-size: 15px;
+    color: #333333;
+}
+#searchSong .results .resultSong .resultSvg{
+    display: inline-block;
+    width: 15px;
+    height:15px;
+    background-size: cover;
+    background-position: 0 0;
+    background: url('../image/下载.svg') no-repeat;
 }
