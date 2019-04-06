@@ -375,16 +375,17 @@ a{
     justify-content: center;
     border-bottom: 1px solid rgba(0,0,0,.1);
 }
-#searchSong .searchBox .raduisContent{ 
-    height: 30px;
-    width: 95vw;
+#searchSong .raduisContent{ 
     color: #c9c9c9;
     background-color: #ebecec;
     border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 input::-webkit-input-placeholder{color:#ebecec;}
-#searchSong .searchBox input{
+#searchSong #searchBox {
     line-height: 18px;
     height: 29px;
     width: 70vw;
@@ -394,13 +395,13 @@ input::-webkit-input-placeholder{color:#ebecec;}
     border: none;
     outline: none;
 }
-#searchSong .searchBox .radiusBox{
+#searchSong .radiusBox{
     display: inline-block;
     width: 30px;
     height: 30px;
     text-align: center;
 }
-#searchSong .searchBox .svgIcon{
+#searchSong .svgIcon{
     display: inline-block;
     width: 13px;
     height:13px;
@@ -408,10 +409,10 @@ input::-webkit-input-placeholder{color:#ebecec;}
     background-size: cover;
     background-position: 0 0;
 }
-#searchSong .searchBox .look{
+#searchSong .look{
     background: url('../image/下载.svg') no-repeat;
 }
-#searchSong .searchBox .delete{
+#searchSong .delete{
     background: url('../image/下载2.svg') no-repeat;
     
 }
