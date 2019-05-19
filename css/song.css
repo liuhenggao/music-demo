@@ -65,12 +65,14 @@ a{
 }
 .cloudMusic .setting .songInfo .cloudSvg{
     position: absolute;
-    top: 12px;
-    left: 10px;
+    top: 5px;
+    left: 5px;
+    
 }
-.cloudMusic .setting .songInfo .u-svg{
+.cloudMusic .setting .songInfo .u_svg{
     width: 92px;
-    height: 17px;
+    height: 20px;
+    background: #f5efef00;
 }
 .cloudMusic .setting .songInfo .record{
     width: 100%;
@@ -201,16 +203,16 @@ a{
     width: 47vw;
     text-align: center;
     padding: 0 6px;
-    border: 1px solid #d33a31;
+    border: 1px solid #a80038;
     line-height: 38px;
     border-radius: 38px;
 }
 .cloudMusic .setting .artLink .openLink{
-    color: #d33a31;
+    color: #a80038;
     font-size: 18px;
 }
 .cloudMusic .setting .artLink .loadLink{
-    background-color: #d33a31;
+    background-color: #a80038;
     color: #fefefe;
     font-size: 18px;
 }

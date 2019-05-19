@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #333;
+    color: #2b2024;
     font-weight: normal;
 }
 *::after{
@@ -19,9 +19,14 @@ a{
     color: inherit;
     text-decoration: none;
 }
+
+body{
+    border: 1px solid #2b2024;
+}
 ::-webkit-scrollbar{
     /*scroll滚动条设置*/
-    width: 0px; height: 0px;background-color: #fff;  
+    width: 0px; height: 0px;
+    background-color: #fbf9fa;  
 }
 /** layout **/
 .header{
@@ -66,13 +71,16 @@ a{
 .header .title{
     display: inline-block;
     font-size: 17px;
-    color:#fefefe;
+    color:#2b2024;
     margin-top: 5px;
 }
 .header .signLink{
     margin-bottom: 15px;
     display: flex;
     align-items: center;
+}
+.header .signLink .logo_miu{
+    width: 20vw;
 }
 .header .signLink .cloudMusic{
 

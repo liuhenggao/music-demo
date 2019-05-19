@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #333;
     font-weight: normal;
 }
 *::after{
@@ -14,14 +13,23 @@
 }
 ul,ol{
     list-style: none;
+    background: #fbf9fa;
 }
 a{
     color: inherit;
     text-decoration: none;
 }
+body{
+    border: 1px solid #a80038;
+}
+main{
+    background: #ebecec;
+}
 ::-webkit-scrollbar{
     /*scroll滚动条设置*/
-    width: 0px; height: 0px;background-color: #fff;  
+    width: 0px; 
+    height: 0px;
+    background-color: #fff;  
 }
 /* layout */
 .home{
@@ -37,13 +45,18 @@ a{
     overflow-y: auto;
     height: auto;
 }
+
 .home header .top1{
     display: flex;
     justify-content: space-between;
     vertical-align: center;
     padding: 17px 10px;
     vertical-align: middle;
-    background-color: #d43c33;
+    background: #fbf9fa;
+}
+.home header .top1 .icon_logo{
+    width: 30vw;
+    height: 30px;
 }
 .home header .top1 .topsvg{
     display: inline-block;
@@ -55,22 +68,11 @@ a{
     position: relative;
     line-height: 30px;
     padding: 0 10px;
-    color: #ffffff;
+    color: #a80038;
     font-size: 15px;
+    border: 2px solid #a80038;
+    border-radius: 10px/10px;
 }
-.home header .top1 .minArt::after{
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    border-radius: 37.5%/100%;
-    transform: scale(.5);
-    transform-origin: top left;
-    border: 1px solid #ffffff;
-    top: 0;
-    left: 0;
-}
-
 .home header nav{
     display: flex;
     height: 41px;
@@ -78,7 +80,6 @@ a{
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 .home header nav .content{
     display: inline-block;
@@ -92,13 +93,14 @@ a{
     padding: 0 5px;
 }
 .home header nav .content .underline.active{
-    color: #d33a31;
+    color: #a80038;
     height: 41px;
-    border-bottom: 2px solid #d33a31;
+    border-bottom: 2px solid #a80038;
 }
 
 #sheetSong{
     padding-top: 20px;
+    background: #fbf9fa;
 }
 #sheetSong h2{
     position: relative;
@@ -112,13 +114,13 @@ a{
     content: '';
     display: block;
     position: absolute;
-    border: 1px solid #d33a31;
+    border: 1px solid #a80038;
     top: 50%;
     left: 0;
     transform: translate(0,-50%);
     width: 2px;
     height: 16px;
-    background-color: #d33a31;
+    background-color: #a80038;
 }
 #sheetSong .songSheet{
     padding-bottom: 24px;
@@ -179,7 +181,7 @@ a{
     border-bottom: 1px solid rgba(0,0,0,.1);
 }
 #sheetSong .newest .newsong li a{
-    color: #333;
+    color: #2b2024;
     width: 100%;
     height: 100%;
 }
@@ -202,6 +204,7 @@ a{
     background: url('../image/sq.png') no-repeat;
     background-size: 166px 97px;
     background-position: 0 0;
+    color: #fd0054;
 }
 #sheetSong .newest .newsong li .begin{
     position: absolute;
@@ -225,6 +228,7 @@ a{
     padding-top: 66px;
     background: url('../image/footer-background.png') no-repeat;
     background-size: cover;
+    text-align: center;
 }
 #sheetSong footer .logosvg{
     width: 230px;
@@ -239,8 +243,8 @@ a{
     border-radius: 40px;
     margin: 15px auto 6px auto;
     text-align: center;
-    border: 1px solid #d43c33;
-    color: #d33a31;
+    border: 1px solid #2b2024;
+    color: #2b2024;
 }
 #sheetSong footer .copyright{
     font-size: 12px;
@@ -250,6 +254,9 @@ a{
     text-align: center;
     margin-bottom: 15px;
 }
+#sheetSong footer .miumiu{
+    width: 90vw;
+}
 
 /*section 2*/
 
@@ -257,7 +264,7 @@ a{
     position: relative;
     padding-top: 38.9%;
     overflow: hidden;
-    background: url('../image/tag.jpg') no-repeat;
+    background: #fd0054;
     background-size: cover;
 }
 #hotSong .tag .tagOuter{
@@ -284,13 +291,12 @@ a{
 #hotSong .tag .tagImg{
     width: 142px;
     height: 67px;
-    background: url('../image/sq.png') no-repeat;
     background-size: 166px 97px;
     background-position: -24px -30px;
 }
 #hotSong .tag .upDate{
     font-size: 12px;
-    color: hsla(0, 0%, 100%, .8);
+    color: #2b2024;
     margin-top: 10px;
 }
 
@@ -303,7 +309,7 @@ a{
 }
 #hotSong .hotMusic .musicSheet li a{
     display: flex;
-    color: #333;
+    color: #2b2024;
     width: 100%;
     height: 100%;
 }
@@ -390,7 +396,7 @@ input::-webkit-input-placeholder{color:#ebecec;}
     height: 29px;
     width: 70vw;
     font-size: 14px;
-    color: #333333;
+    color: #2b2024;
     background-color: #ebecec;
     border: none;
     outline: none;
@@ -445,7 +451,7 @@ input::-webkit-input-placeholder{color:#ebecec;}
     height: 32px;
     line-height: 32px;
     margin-top: -2px;
-    color: #333;
+    color: #2b2024;
 }
 #searchSong .results .resultSong{
     height: 45px;
@@ -463,7 +469,7 @@ input::-webkit-input-placeholder{color:#ebecec;}
     overflow: hidden;
     padding-left: 5px;
     font-size: 15px;
-    color: #333333;
+    color: #2b2024;
 }
 #searchSong .results .resultSong .resultSvg{
     display: inline-block;
